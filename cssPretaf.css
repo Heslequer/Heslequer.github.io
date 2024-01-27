@@ -11,11 +11,22 @@ body{
     background-color: rgba(255, 255, 255, 0.551);
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.271), -2px -3px 5px rgba(0, 0, 0, 0.271);
     border-radius: 8px;
-    padding: 3vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-top: 3vh;
+    padding-bottom: 0.001vh;
+
+
+
 
 }
+p{
+    display: block;
+    text-align: end;
+    color: rgba(0, 0, 0, 0.062);
+}
 h{
-    color: rgba(0, 0, 0, 0.332);
+    color: rgba(0, 0, 0, 0.158);
     font-family: 'Open Sans', sans-serif;
     font-size: 30pt;
     font-weight: 800;
