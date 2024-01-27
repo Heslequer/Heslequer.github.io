@@ -1,3 +1,11 @@
+$('.select2').select2({
+  templateResult: function(option) {
+     if(option.element && (option.element).hasAttribute('hidden')){
+        return null;
+     }
+     return option.text;
+  }
+});
 fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTq9cuxu_qIW0JLyUAs1EKwBDygifvKlHRWqWYbLIGOgQGebke-VWfomTl6arIIt1PoygkQadrXHMEe/pubhtml')
   .then(response => response.text())
   .then(html => {
@@ -41,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const clicou = (event) => {
         event.preventDefault();
         var valorNome = document.getElementById("nome").value
-        if(valorNome === ''){
+        if(valorNome === 'Selecione o Nome'){
             valorNome = document.getElementById('nomeCompleto').value
 
         }
