@@ -16,7 +16,7 @@ body{
 
 }
 h{
-    color: rgb(0, 0, 0);
+    color: rgba(0, 0, 0, 0.332);
     font-family: 'Open Sans', sans-serif;
     font-size: 30pt;
     font-weight: 800;
@@ -34,7 +34,7 @@ h{
 }
 input{
     all:unset;
-    width: 30vw;
+    width: 30vh;
     padding: 5pt 10pt;
     border-radius: 8px;
     box-sizing: border-box;
@@ -48,8 +48,7 @@ option{
     font-size: 12pt;
 }
 #nome{
-    width: 30vw;
-
+    width: 30vh;
 }
 .select2-selection__rendered{
     border-radius: 8px;
@@ -90,7 +89,7 @@ select:required:invalid {
 }
 
 select{
-   width: 30vw;
+   width: 30vh;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.271);
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
