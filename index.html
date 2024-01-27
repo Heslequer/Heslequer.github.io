@@ -12,30 +12,35 @@
     <script src="jsPRetaf.js"></script>
     <script src="teste.js"></script>
     <link rel="stylesheet" href="cssPretaf.css">
-    
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="quadro">
         <form id='formulario'>
+            <h class="titulo">PRE-TAF</h>
             <div class="pergunta"  id="listaNomes">
-                <label for="">Selecione o nome:</label>
-                <br>
-                <select id="nome">
+                <select id="nome" required>
+                    <option disabled="disabled" selected>Selecione o Nome</option>
                 </select>
             </div>
-            <br>
             <div class="pergunta">
-                <label>Nome Completo</label>
-                <br>
-                <input type="text" id="nomeCompleto">
+                <input type="text" id="nomeCompleto" placeholder="Nome Completo">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Posto de Graduação</label>
-                <br>
-                <select id='pg'>
-                    <option></option>
+                <select id='pg' required>
+                    <option value="" disabled selected hidden>Posto de Graduação</option>
                     <option>SD EV</option>
                     <option>SD EP</option>
                     <option>CB EP</option>
@@ -52,12 +57,9 @@
                     <option>GEN</option>
                 </select>
             </div>
-            <br>
             <div class="pergunta">
-                <label>Organização Militar</label>
-                <br>
-                <select id='om'>
-                    <option></option>
+                <select id='om' required>
+                    <option value="" disabled selected hidden>Organização Militar</option>
                     <option>CMD 12ª BDA INF L (AMV)</option>
                     <option>CIA C 12ª BDA INF L (AMV)</option>
                     <option>6° BIL</option>
@@ -65,12 +67,9 @@
                     <option>12° PEL PE</option>
                 </select>
             </div>
-            <br>
             <div class="pergunta">
-                    <label>Subunidade</label>
-                    <br>
-                    <select id='sb'>
-                        <option></option>
+                    <select id='sb' required>
+                        <option value="" disabled selected hidden>Subunidade</option>
                         <option>CIA C 12ª BDA INF L (AMV)</option>
                         <option>1ª CIA FUZ L</option>
                         <option>2ª CIA FUZ L</option>
@@ -83,60 +82,35 @@
                         <option>ADIDOS</option>
                     </select>
             </div>
-            <br>
             <div class="pergunta">
-                <label>Idade</label>
-                <br>
-                <input type="text" id="idade">
+                <input type="text" id="idade" placeholder="Idade">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Peso</label>
-                <br>
-                <input type="text" id='peso'>
+                <input type="text" id='peso' placeholder="Peso">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Altura (em centímetros)</label>
-                <br>
-                <input type="text" id="altura">
+                <input type="text" id="altura" placeholder="Altura (Centímetros)">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Cintura</label>
-                <br>
-                <input type="text" id='cintura'>
+                <input type="text" id='cintura' placeholder="Cintura">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Abdomen</label>
-                <br>
-                <input type="text" id="abdomen">
+                <input type="text" id="abdomen" placeholder="Abdomen">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Quadril</label>
-                <br>
-                <input type="text" id="quadril">
+                <input type="text" id="quadril" placeholder="Quadril">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Pressão Arterial</label>
-                <br>
-                <input type="text" id="pressao">
+                <input type="text" id="pressao" placeholder="Pressão Arterial">
             </div>
-            <br>
             <div class="pergunta">
-                <label>Parecer</label>
-                <br>
-                <select id="parecer">
-                    <option></option>
+                <select id="parecer" required>
+                    <option value="" disabled selected hidden id="placeholder">Parecer</option>
                     <option>Apto</option>
                     <option>Inapto</option>
                     <option>Aguardando Exames</option>
                 </select>
             </div>
-            <br>
             <button type="submit">Enviar</button>
         </form>
     </div>
