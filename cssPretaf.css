@@ -44,7 +44,7 @@ h{
 }
 input{
     all:unset;
-    width: 50vh;
+    width: 45vh;
     padding: 5pt 10pt;
     border-radius: 8px;
     box-sizing: border-box;
@@ -58,7 +58,7 @@ option{
     font-size: 12pt;
 }
 #nome{
-    width: 50vh;
+    width: 45vh;
 }
 .select2-selection__rendered{
     border-radius: 8px;
@@ -98,7 +98,7 @@ select:required:invalid {
 }
 
 select{
-    width:50vh;
+    width:45vh;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.271);
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
