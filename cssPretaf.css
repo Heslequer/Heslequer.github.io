@@ -99,8 +99,7 @@ select:required:invalid {
 }
 
 select{
-   max-width: 50vh;
-    width:50vh
+    width:50vh;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.271);
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
