@@ -44,7 +44,8 @@ h{
 }
 input{
     all:unset;
-    width: 45vh;
+    width: 60vw;
+    height: 35px;
     padding: 5pt 10pt;
     border-radius: 8px;
     box-sizing: border-box;
@@ -57,11 +58,15 @@ option{
     font-family: 'open sans', Helvetica, sans-serif;
     font-size: 12pt;
 }
-#nome{
-    width: 45vh;
+.select2-container--default {
+    width: 60vw !important;
 }
+.select2-selection {
+    height: 35px !important;
+    }
 .select2-selection__rendered{
     border-radius: 8px;
+    height: 35px !important;
     box-shadow: -3px -2px 0px  rgba(0, 106, 255);
 
 }
@@ -98,14 +103,13 @@ select:required:invalid {
 }
 
 select{
-    width:45vh;
+    width: 60vw;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.271);
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
     font-size: 12pt;
     font-family: 'open sans';
     cursor: pointer;
-
     padding: 5px 20px;
     box-sizing: border-box;
     border-color: aliceblue;

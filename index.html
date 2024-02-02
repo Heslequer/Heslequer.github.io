@@ -104,13 +104,22 @@
                 <input type="text" id="pressao" placeholder="Pressão Arterial">
             </div>
             <div class="pergunta">
+                <select id="parecerOdt" required>
+                    <option value="" disabled selected hidden id="placeholder">Parecer Ondotológico</option>
+                    <option>Apto</option>
+                    <option>Inapto</option>
+                </select>
+            </div>
+            <div class="pergunta">
                 <select id="parecer" required>
-                    <option value="" disabled selected hidden id="placeholder">Parecer</option>
+                    <option value="" disabled selected hidden id="placeholder">Parecer Médico</option>
                     <option>Apto</option>
                     <option>Inapto</option>
                     <option>Aguardando Exames</option>
                 </select>
+                
             </div>
+
             <button type="submit">Enviar</button>
             <p>by:Heslequer</p>
         </form>
