@@ -45,6 +45,7 @@ h{
 input{
     all:unset;
     width: 60vw;
+    max-width: 400px;
     height: 35px;
     padding: 5pt 10pt;
     border-radius: 8px;
@@ -60,6 +61,8 @@ option{
 }
 .select2-container--default {
     width: 60vw !important;
+    max-width: 400px;
+
 }
 .select2-selection {
     height: 35px !important;
@@ -104,6 +107,7 @@ select:required:invalid {
 
 select{
     width: 60vw;
+    max-width: 400px;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.271);
     background-color: rgb(255, 255, 255);
     border-radius: 8px;
