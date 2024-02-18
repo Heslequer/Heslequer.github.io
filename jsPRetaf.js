@@ -62,33 +62,66 @@ document.addEventListener('DOMContentLoaded', function() {
     const clicou = (event) => {
         event.preventDefault();
         var nome = document.getElementById("nome").value
-        if(nome === 'Selecione o Nome'){
+        if(nome === 'Selecione o Nome')
+        {
+          if(document.getElementById("nomeCompleto").value === ''){
+            alert('PREENCHA TODOS OS CAMPOS')
+
+          }else
+          {
             nome = document.getElementById('nomeCompleto').value
-        }
-        const postodeGraduacao = document.querySelector('#pg').value
-        const organizacaoMilitar = document.querySelector('#om').value
-        const subunidade = document.querySelector('#sb').value
-        const idade = document.querySelector('#idade').value
-        const peso = document.querySelector('#peso').value
-        const altura = document.querySelector('#altura').value
-        const cintura = document.querySelector('#cintura').value
-        const abdomen = document.querySelector('#abdomen').value
-        const quadril = document.querySelector('#quadril').value
-        const pressao = document.querySelector('#pressao').value
-        const parecerOdonto = document.querySelector('#parecerOdt').value
-        const parecerMedico = document.querySelector('#parecer').value
-        const data = gerarData()
-        fetch('https://api.sheetmonkey.io/form/gWNF9GS36ff4Bqrido88dK', {
-        method: 'post',
-        headers : {
+            const postodeGraduacao = document.querySelector('#pg').value
+            const organizacaoMilitar = document.querySelector('#om').value
+            const subunidade = document.querySelector('#sb').value
+            const idade = document.querySelector('#idade').value
+            const peso = document.querySelector('#peso').value
+            const altura = document.querySelector('#altura').value
+            const cintura = document.querySelector('#cintura').value
+            const abdomen = document.querySelector('#abdomen').value
+            const quadril = document.querySelector('#quadril').value
+            const pressao = document.querySelector('#pressao').value
+            const parecerOdonto = document.querySelector('#parecerOdt').value
+            const parecerMedico = document.querySelector('#parecer').value
+            const data = gerarData()
+            fetch('https://api.sheetmonkey.io/form/gWNF9GS36ff4Bqrido88dK', {
+            method: 'post',
+            headers : {
             'Accept': 'application/json',
             'Content-Type': 'application/json', 
-        },
-        body: JSON.stringify({ nome , idade, postodeGraduacao, organizacaoMilitar,subunidade,peso, altura, cintura,abdomen,quadril,pressao,parecerOdonto,parecerMedico, data })
-        });
-        
-         alert('ENVIADO COM SUCESSO')
-         window.location.reload()
+            },
+            body: JSON.stringify({ nome , idade, postodeGraduacao, organizacaoMilitar,subunidade,peso, altura, cintura,abdomen,quadril,pressao,parecerOdonto,parecerMedico, data })
+            });
+
+            alert('ENVIADO COM SUCESSO')
+            window.location.reload();
+          }
+        }else
+        {
+          const postodeGraduacao = document.querySelector('#pg').value
+          const organizacaoMilitar = document.querySelector('#om').value
+          const subunidade = document.querySelector('#sb').value
+          const idade = document.querySelector('#idade').value
+          const peso = document.querySelector('#peso').value
+          const altura = document.querySelector('#altura').value
+          const cintura = document.querySelector('#cintura').value
+          const abdomen = document.querySelector('#abdomen').value
+          const quadril = document.querySelector('#quadril').value
+          const pressao = document.querySelector('#pressao').value
+          const parecerOdonto = document.querySelector('#parecerOdt').value
+          const parecerMedico = document.querySelector('#parecer').value
+          const data = gerarData()
+          fetch('https://api.sheetmonkey.io/form/gWNF9GS36ff4Bqrido88dK', {
+          method: 'post',
+          headers : {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json', 
+          },
+          body: JSON.stringify({ nome , idade, postodeGraduacao, organizacaoMilitar,subunidade,peso, altura, cintura,abdomen,quadril,pressao,parecerOdonto,parecerMedico, data })
+          });
+
+          alert('ENVIADO COM SUCESSO')
+          window.location.reload()
+        }
         
     }
 
