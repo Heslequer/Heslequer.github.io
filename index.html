@@ -31,11 +31,16 @@
             <h class="titulo">PRE-TAF</h>
             <div class="pergunta"  id="listaNomes">
                 <select id="nome" required>
-                    <option disabled="disabled" selected>Selecione o Nome</option>
+                    <option  disabled selected>Selecione o Nome</option>
                 </select>
             </div>
-            <div class="pergunta">
-                <input type="text" id="nomeCompleto" placeholder="Nome Completo">
+            <div class="pergunta" id="divNomeCompleto">
+                <input type="text" id="nomeCompleto" class="inputText" placeholder="Nome Completo">
+            </div>
+            <div id="sombraCheckbox">
+                <div id="divcheckbox">
+                    <input type="checkbox" id="checkbox" onclick="clicouCheckbox()">Não tem cadastro?</input>
+                </div>
             </div>
             <div class="pergunta">
                 <select id='pg' required>
@@ -52,13 +57,14 @@
                     <option>1° TEN</option>
                     <option>CAP</option>
                     <option>MAJ</option>
+                    <option>TC</option>
                     <option>CEL</option>
                     <option>GEN</option>
                 </select>
             </div>
             <div class="pergunta">
                 <select id='om' required>
-                    <option value="" disabled selected hidden>Organização Militar</option>
+                    <option value=""  selected hidden >Organização Militar</option>
                     <option>CMD 12ª BDA INF L (AMV)</option>
                     <option>CIA C 12ª BDA INF L (AMV)</option>
                     <option>6° BIL</option>
@@ -82,25 +88,25 @@
                     </select>
             </div>
             <div class="pergunta">
-                <input type="text" id="idade" placeholder="Idade" required>
+                <input type="text" id="idade" class="inputText" placeholder="Idade" required>
             </div>
             <div class="pergunta">
-                <input type="text" id='peso' placeholder="Peso" required>
+                <input type="text" id='peso' class="inputText" placeholder="Peso" required>
             </div>
             <div class="pergunta">
-                <input type="text" id="altura" placeholder="Altura (Centímetros)" required>
+                <input type="text" id="altura" class="inputText" placeholder="Altura (Centímetros)" required>
             </div>
             <div class="pergunta">
-                <input type="text" id='cintura' placeholder="Cintura" required>
+                <input type="text" id='cintura' class="inputText" placeholder="Cintura" required>
             </div>
             <div class="pergunta">
-                <input type="text" id="abdomen" placeholder="Abdomen" required>
+                <input type="text" id="abdomen" class="inputText" placeholder="Abdomen" required>
             </div>
             <div class="pergunta">
-                <input type="text" id="quadril" placeholder="Quadril" required>
+                <input type="text" id="quadril" class="inputText" placeholder="Quadril" required>
             </div>
             <div class="pergunta">
-                <input type="text" id="pressao" placeholder="Pressão Arterial" required>
+                <input type="text" id="pressao" class="inputText" placeholder="Pressão Arterial" required>
             </div>
             <div class="pergunta">
                 <select id="parecerOdt">
