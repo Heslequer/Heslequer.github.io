@@ -6,6 +6,7 @@ $('.select2').select2({
      return option.text;
   }
 });
+
 fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTq9cuxu_qIW0JLyUAs1EKwBDygifvKlHRWqWYbLIGOgQGebke-VWfomTl6arIIt1PoygkQadrXHMEe/pubhtml')
   .then(response => response.text())
   .then(html => {
@@ -26,7 +27,6 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTq9cuxu_qIW0JLyUAs1EKwBD
       data.push(rowData);
     });
     criarLinhas(data)
-    console.log(data); // Dados extraídos da planilha
   })
   .catch(error => {
     console.error('Erro ao acessar a planilha:', error);
@@ -44,6 +44,19 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTq9cuxu_qIW0JLyUAs1EKwBD
 $(document).ready(function() {
     $('#nome').select2();
 });
+
+
+
+function clicouCheckbox(){
+  if(nomeCompleto.style.display === 'block'){
+    nomeCompleto.style.display = 'none'
+    listaNomes.style.display = 'block'
+  }else{
+    nomeCompleto.style.display = 'block'
+    listaNomes.style.display = 'none'
+  }
+}
+
 function gerarData()
 {
   var d = new Date();
@@ -57,6 +70,28 @@ function gerarData()
   return data
 
 }
+function limparDados(){
+  $( "#nome").val('Selecione o Nome').trigger('change');
+  $("#nome").select2({placeholder: "Selecione o Nome"});
+  document.getElementById('nomeCompleto').value = "";
+  document.getElementById('checkbox').checked = false;
+  nomeCompleto.style.display = 'none'
+  listaNomes.style.display = 'block'
+  document.getElementById('pg').selectedIndex = 0;
+  document.getElementById('om').selectedIndex = 0;
+  document.getElementById('sb').selectedIndex = 0;
+  document.getElementById('idade').value = "";
+  document.getElementById('peso').value = "";
+  document.getElementById('altura').value = "";
+  document.getElementById('cintura').value = "";
+  document.getElementById('abdomen').value = "";
+  document.getElementById('quadril').value = "";
+  document.getElementById('pressao').value = "";
+  document.getElementById('parecerOdt').selectedIndex = 0;
+  document.getElementById('parecer').selectedIndex = 0;
+}
+function passarDados(){}
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const clicou = (event) => {
@@ -93,9 +128,37 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             alert('ENVIADO COM SUCESSO')
-            window.location.reload();
+            limparDados();
+            //recarregar
           }
-        }else
+        }else if(document.getElementById("nomeCompleto").value !== ''){
+          nome = document.getElementById('nomeCompleto').value
+          const postodeGraduacao = document.querySelector('#pg').value
+            const organizacaoMilitar = document.querySelector('#om').value
+            const subunidade = document.querySelector('#sb').value
+            const idade = document.querySelector('#idade').value
+            const peso = document.querySelector('#peso').value
+            const altura = document.querySelector('#altura').value
+            const cintura = document.querySelector('#cintura').value
+            const abdomen = document.querySelector('#abdomen').value
+            const quadril = document.querySelector('#quadril').value
+            const pressao = document.querySelector('#pressao').value
+            const parecerOdonto = document.querySelector('#parecerOdt').value
+            const parecerMedico = document.querySelector('#parecer').value
+            const data = gerarData()
+            fetch('https://api.sheetmonkey.io/form/gWNF9GS36ff4Bqrido88dK', {
+            method: 'post',
+            headers : {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json', 
+            },
+            body: JSON.stringify({ nome , idade, postodeGraduacao, organizacaoMilitar,subunidade,peso, altura, cintura,abdomen,quadril,pressao,parecerOdonto,parecerMedico, data })
+            });
+
+            alert('ENVIADO COM SUCESSO')
+            limparDados();
+        }
+        else
         {
           const postodeGraduacao = document.querySelector('#pg').value
           const organizacaoMilitar = document.querySelector('#om').value
@@ -120,10 +183,10 @@ document.addEventListener('DOMContentLoaded', function() {
           });
 
           alert('ENVIADO COM SUCESSO')
-          window.location.reload()
+          limparDados();
+          //Recarragar
         }
         
     }
-
     window.document.querySelector('form').addEventListener('submit', clicou);
 });
