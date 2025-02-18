@@ -7,7 +7,7 @@ $('.select2').select2({
   }
 });
 
-fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTq9cuxu_qIW0JLyUAs1EKwBDygifvKlHRWqWYbLIGOgQGebke-VWfomTl6arIIt1PoygkQadrXHMEe/pubhtml')
+fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vSdYLZf2PjsVn5qfeNX32FjIXj-4rF4pLqT8SAL57An7cj3hh47-hjx1ZEYwTwQeGJWtQ5d3L_5YY8c/pubhtml')
   .then(response => response.text())
   .then(html => {
     // Use o conteúdo HTML para extrair os dados da tabela
