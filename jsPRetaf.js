@@ -7,7 +7,7 @@ $('.select2').select2({
   }
 });
 
-fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vSdYLZf2PjsVn5qfeNX32FjIXj-4rF4pLqT8SAL57An7cj3hh47-hjx1ZEYwTwQeGJWtQ5d3L_5YY8c/pubhtml')
+fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTq9cuxu_qIW0JLyUAs1EKwBDygifvKlHRWqWYbLIGOgQGebke-VWfomTl6arIIt1PoygkQadrXHMEe/pubhtml')
   .then(response => response.text())
   .then(html => {
     // Use o conteúdo HTML para extrair os dados da tabela
@@ -134,29 +134,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }else if(document.getElementById("nomeCompleto").value !== ''){
           nome = document.getElementById('nomeCompleto').value
           const postodeGraduacao = document.querySelector('#pg').value
-            const organizacaoMilitar = document.querySelector('#om').value
-            const subunidade = document.querySelector('#sb').value
-            const idade = document.querySelector('#idade').value
-            const peso = document.querySelector('#peso').value
-            const altura = document.querySelector('#altura').value
-            const cintura = document.querySelector('#cintura').value
-            const abdomen = document.querySelector('#abdomen').value
-            const quadril = document.querySelector('#quadril').value
-            const pressao = document.querySelector('#pressao').value
-            const parecerOdonto = document.querySelector('#parecerOdt').value
-            const parecerMedico = document.querySelector('#parecer').value
-            const data = gerarData()
-            fetch('https://api.sheetmonkey.io/form/gWNF9GS36ff4Bqrido88dK', {
-            method: 'post',
-            headers : {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json', 
-            },
-            body: JSON.stringify({ nome , idade, postodeGraduacao, organizacaoMilitar,subunidade,peso, altura, cintura,abdomen,quadril,pressao,parecerOdonto,parecerMedico, data })
-            });
+          const organizacaoMilitar = document.querySelector('#om').value
+          const subunidade = document.querySelector('#sb').value
+          const idade = document.querySelector('#idade').value
+          const peso = document.querySelector('#peso').value
+          const altura = document.querySelector('#altura').value
+          const cintura = document.querySelector('#cintura').value
+          const abdomen = document.querySelector('#abdomen').value
+          const quadril = document.querySelector('#quadril').value
+          const pressao = document.querySelector('#pressao').value
+          const parecerOdonto = document.querySelector('#parecerOdt').value
+          const parecerMedico = document.querySelector('#parecer').value
+          const data = gerarData()
+          fetch('https://api.sheetmonkey.io/form/gWNF9GS36ff4Bqrido88dK', {
+          method: 'post',
+          headers : {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json', 
+          },
+          body: JSON.stringify({ nome , idade, postodeGraduacao, organizacaoMilitar,subunidade,peso, altura, cintura,abdomen,quadril,pressao,parecerOdonto,parecerMedico, data })
+          });
 
-            alert('ENVIADO COM SUCESSO')
-            limparDados();
+          alert('ENVIADO COM SUCESSO')
+          limparDados();
+          //Recarragar
         }
         else
         {
