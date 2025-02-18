@@ -15,10 +15,11 @@ body{
     padding-right: 3vh;
     padding-top: 3vh;
     padding-bottom: 0.001vh;
+    display: flex;
+    flex-direction: column;
 
 }
 p{
-    display: block;
     text-align: end;
     color: rgba(0, 0, 0, 0.062);
 }
@@ -62,7 +63,7 @@ h{
 }
 #sombraCheckbox{
     width: fit-content;
-    margin-top: 5%;
+    margin-top: 3px;
     border-radius: 8px;
     box-sizing: border-box;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.271);
@@ -137,7 +138,6 @@ select{
     background-color: white;
     box-shadow: -3px -2px 0px  rgba(0, 106, 255);
 }
-::placeholder{
-    font-family: 'open sans';
-    font-size: 12pt;
+#parecer, #parecerOdt{
+    color: #777777;
 }
